@@ -15,6 +15,8 @@ endif()
 file (GLOB SOIL_SOURCES src/*.c)
 file (GLOB SOIL_HEADERS src/*.h)
 
+include_directories(${GLEW_INCLUDE_DIR})
+
 add_library (SOIL ${SOIL_SOURCES} ${SOIL_HEADERS})
 target_link_libraries (SOIL ${LIBRARIES})
 
