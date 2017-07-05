@@ -103,7 +103,8 @@ enum
 	SOIL_FLAG_DDS_LOAD_DIRECT = 64,
 	SOIL_FLAG_NTSC_SAFE_RGB = 128,
 	SOIL_FLAG_CoCg_Y = 256,
-	SOIL_FLAG_TEXTURE_RECTANGLE = 512
+	SOIL_FLAG_TEXTURE_RECTANGLE = 512,
+	SOIL_FLAG_RED_BLUE_SWAP = 1024
 };
 
 /**
@@ -238,7 +239,9 @@ unsigned int
 		int buffer_length,
 		int force_channels,
 		unsigned int reuse_texture_ID,
-		unsigned int flags
+		unsigned int flags,
+		int* out_width,
+		int* out_height
 	);
 
 /**
